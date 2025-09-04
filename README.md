@@ -52,7 +52,7 @@ shap
 ### Directory
 
 ```
-house-price-prediction/
+upstage-ml-regression-ml_2/
 │
 ├── data/                # 데이터 저장
 │   ├── raw/             # 원본 데이터 (절대 수정 X)
