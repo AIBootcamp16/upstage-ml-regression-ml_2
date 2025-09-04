@@ -272,3 +272,8 @@ data/raw/
 models/
 members/*/*.pkl
 
+
+# model artifacts
+models/
+members/*/*.pkl
+
