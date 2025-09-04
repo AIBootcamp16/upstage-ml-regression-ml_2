@@ -52,22 +52,53 @@ shap
 ### Directory
 
 ```
-project/
- ├─ data/             # 데이터 (gitignore)
- │   ├─ raw/          # 원본
- │   ├─ interim/      # 중간 가공
- │   └─ processed/    # 최종 전처리
- ├─ notebooks/        # 개인/공용 노트북
- │   ├─ 01_eda_soeun.ipynb
- │   ├─ 02_features_hyun.ipynb
- │   └─ ...
- ├─ src/              # 공용 코드
- │   ├─ features/     # 전처리/파생변수
- │   ├─ models/       # 학습/추론
- │   └─ utils/        # 입출력, metric
- ├─ outputs/          # 결과물 (submissions, figures, logs)
- ├─ logs/             # 실험 기록
- └─ README.md
+house-price-prediction/
+│
+├── data/                # 데이터 저장
+│   ├── raw/             # 원본 데이터 (절대 수정 X)
+│   ├── processed/       # 전처리된 데이터
+│   └── external/        # 외부 공공데이터 (예: 행정구역, 학군, 교통)
+│
+├── notebooks/           # 실험용 주피터 노트북
+│   ├── 01_eda.ipynb     # (예시 파일들)
+│   ├── 02_preprocessing.ipynb
+│   ├── 03_modeling.ipynb
+│   └── 04_evaluation.ipynb
+│
+├── src/                 # 실제 코드 (함수화/모듈화)
+│   ├── __init__.py
+│   ├── preprocessing.py # 결측치, 이상치 처리
+│   ├── features.py      # Feature Engineering
+│   ├── train.py         # 모델 학습 코드
+│   ├── evaluate.py      # 평가 코드
+│   └── inference.py     # 추론 코드
+│
+├── models/              # 학습된 모델(pkl, h5 등)
+│   └── random_forest.pkl
+│
+├── outputs/             # 결과물 저장
+│   ├── figures/         # 시각화 이미지
+│   ├── logs/            # 로그 파일
+│   └── submissions/     # 제출용 csv
+│
+├── members/             # 개인별 작업 폴더
+│   ├── soeun/           # (김소은)
+│   │   └── notebooks/   # 개인 노트북, 시도해본 코드
+│   ├── jaerok/             # (김재록)
+│   │   └── notebooks/
+│   ├── jonghwa/         # (김종화)
+│   │   └── notebooks/
+│   ├── bokyoung/           # (최보경)
+│   │   └── notebooks/
+│   └── eunhye/            # (황은혜)
+│       └── notebooks/
+│
+├── tests/               # 테스트 코드
+│
+├── requirements.txt     # 의존성 패키지 리스트
+├── README.md            # 프로젝트 개요
+└── .gitignore           # 버전관리 제외 파일
+
 ```
 
 ---
