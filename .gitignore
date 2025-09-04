@@ -267,3 +267,8 @@ $RECYCLE.BIN/
 # End of https://www.toptal.com/developers/gitignore/api/windows,macos,python,jupyternotebooks,vim
 data/raw/*.csv
 data/raw/
+
+# model artifacts
+models/
+members/*/*.pkl
+
