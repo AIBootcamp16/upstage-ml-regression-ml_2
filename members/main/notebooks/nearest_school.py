@@ -17,7 +17,7 @@ def add_schl_features(df, schl_df,
                      lat_col="위도", lon_col="경도",
                      schl_lat_col="위도", schl_lon_col="경도",
                      schl_name_col="학교명",
-                     radii_m=(200, 300, 500, 1000),
+                     radii_m=(100, 200, 300),
                      walk_m_per_min=80,
                      out_csv=None,
                      verbose=True):
