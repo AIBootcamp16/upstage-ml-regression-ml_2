@@ -43,7 +43,7 @@ shap
 ### Timeline
 
 * 2025년 9월 1일 – 대회 시작
-* 2025년 9월 10일 – 최종 제출 마감
+* 2025년 9월 11일 – 최종 제출 마감
 
 ---
 
@@ -110,23 +110,29 @@ upstage-ml-regression-ml_2/
 * **국토부 실거래가 데이터**: 단지명, 전용면적, 층수, 건축년도, 거래금액 등
 * **서울시 교통 데이터**: 지하철역/버스정류장 위치 및 노선 정보
 * **평가 데이터**: 최종 성능 검증용 (blind test set)
-
-### EDA
-
-* 거래금액 분포 확인 → 로그 변환 필요성 파악
-* 건축년도 → 건축연식 변수화
-* 층수 분포/전용면적 분포 → 이상치 처리 기준 설정
-* 지역별 평균 거래금액 차이 확인 (강남/서초/송파 vs 기타 지역)
+* **Geo Coding 위도, 경도 데이터**: 위도, 경도 결측치 보간을 위하여 주소 기준으로 위도 경도 불러옴
+* **학교 데이터**: 근거리 초,중,고등학교 데이터
+* **구별 평균 임금 데이터**: 연말 정산 데이터 기반 서울시 구별 평균 임금
+* **금리 데이터**: 2006~2023년 금리 데이터
+* **물가상승률 데이터**: 2006~2023년 물가상승률 데이터
 
 ### Data Processing
 
-* 결측치 처리: 그룹 평균/중앙값 대체
-* 이상치 처리: 거래금액 quantile 기반 클리핑
+* 결측치 처리:
+* 1) Geo Coding 데이터로 위도/경도 결측치 보간
+  2) 불필요해보이는 변수들 과감히 삭제 (전화번호 등)
+  3) 범주형 변수 : null로 보간
+  4) 연속형 변수 : 단지 키 생성 후 같은 단지 내 값들 중 median값으로 보간
+* 이상치 처리: 전용면적 boxplot에서 면적이 큰 데이터 삭제할 수 있지만 일부러 삭제 안 함
 * 파생변수 생성:
-
-  * 면적당가, 건축연식, 층구간
-  * 단지/지역 평균가
-  * 지하철·버스 접근성 지수
+  * 버스 feature : 최근접 정류장, 반경별 정류장 수
+	 * 지하철 feature : 최근접 거리/역
+	 * 학교 feature : 최근접 학교, 반경별 학교 수
+  * 금리 feature : 증감률, 차이, MA3/MA12, Vol6, 상승여부
+	 * 평균 임금 feature : 연도 내 평균/표준편차, 모멘텀/변동성 추세
+	 * 물가상승률 feature : 전년대비 변화량, 비율 변화, 이동평균, 표준편차
+	 * 강남여부, 한강여부 : 강남x전용면적, 한강x전용면적 상호작용도 함께 추가
+	 * 신축 여부
 
 ---
 
@@ -134,9 +140,9 @@ upstage-ml-regression-ml_2/
 
 ### Model Description
 
-* **Baseline**: Ridge, Lasso, RandomForest
-* **Boosting 계열**: LightGBM, XGBoost, CatBoost
-* **앙상블**: 스태킹/블렌딩
+* **Baseline**: RandomForest
+* **Boosting 계열**: LightGBM, XGBoost
+* **앙상블**: 스태킹
 
 ### Modeling Process
 
@@ -144,7 +150,7 @@ upstage-ml-regression-ml_2/
 2. 기본 모델 학습 → RMSE 기준 성능 측정
 3. 부스팅 계열 모델 확장 → 하이퍼파라미터 튜닝
 4. 교차 검증 (TimeSeriesSplit + 지역 기반 검증)
-5. 스태킹/블렌딩을 통한 최종 성능 개선
+5. 스태킹을 통한 최종 성능 개선
 
 ---
 
@@ -152,9 +158,9 @@ upstage-ml-regression-ml_2/
 
 ### Leader Board
 
-* Public LB RMSE: **XXXX**
-* Private LB RMSE: **XXXX**
-* 최종 순위: **X위**
+* Public LB RMSE: 15426.7103
+* Private LB RMSE: 13682.2369
+* 최종 순위: **5위**
 
 ### Presentation
 
@@ -164,15 +170,11 @@ upstage-ml-regression-ml_2/
 
 ## etc
 
-### Meeting Log
-
-* [Notion 회의록]() (링크 추가 예정)
-
 ### Reference
 
 * 국토교통부 실거래가 공개시스템
 * 서울열린데이터광장 (지하철/버스 정보)
-* Scikit-learn, LightGBM, XGBoost, CatBoost 공식 문서
+* Scikit-learn, LightGBM, XGBoost 공식 문서
 
 ```
 
