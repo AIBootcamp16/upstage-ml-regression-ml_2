@@ -1,10 +1,20 @@
-# House Price Prediction | 아파트 실거래가 예측
+# 🏠 House Price Prediction | 아파트 실거래가 예측
+#### 서울시 아파트 실거래가 매매 데이터를 기반으로 아파트 가격을 예측하는 대회
+<div>
+  <a href="https://github.com/yourusername/yourrepo">
+    <img src="https://img.shields.io/github/stars/yourusername/yourrepo?style=social" alt="GitHub stars"/>
+  </a>
+  <a href="https://github.com/yourusername/yourrepo">
+    <img src="https://img.shields.io/github/forks/yourusername/yourrepo?style=social" alt="GitHub forks"/>
+  </a>
+</div>
+
 ## Team
 
-| ![박패캠](https://avatars.githubusercontent.com/u/156163982?v=4) | ![이패캠](https://avatars.githubusercontent.com/u/156163982?v=4) | ![최패캠](https://avatars.githubusercontent.com/u/156163982?v=4) | ![김패캠](https://avatars.githubusercontent.com/u/156163982?v=4) | ![오패캠](https://avatars.githubusercontent.com/u/156163982?v=4) |
+| ![김소은](https://avatars.githubusercontent.com/u/11532528?v=4) | ![김재록](https://avatars.githubusercontent.com/u/47843619?v=4) | ![김종화](https://avatars.githubusercontent.com/u/221108223?v=4) | ![최보경](https://avatars.githubusercontent.com/u/110219144?v=4) | ![황은혜](https://avatars.githubusercontent.com/u/100017750?v=4) |
 | :--------------------------------------------------------------: | :--------------------------------------------------------------: | :--------------------------------------------------------------: | :--------------------------------------------------------------: | :--------------------------------------------------------------: |
-|            [김소은](https://github.com/oriori88)             |            [김재록](https://github.com/UpstageAILab)             |            [김종화](https://github.com/UpstageAILab)             |            [최보경](https://github.com/UpstageAILab)             |            [황은혜](https://github.com/UpstageAILab)             |
-|                            팀장, 담당 역할                             |                            담당 역할                             |                            담당 역할                             |                            담당 역할                             |                            담당 역할                             |
+|            [김소은 (팀장)](https://github.com/oriori88)             |            [김재록](https://github.com/Raprok612)             |            [김종화](https://github.com/JHKIM-ItG)             |            [최보경](https://github.com/bekky1016)             |            [황은혜](https://github.com/eeunhyee)             |
+| 전처리 <br> feature 추가 <br> 모델링 <br> 작업환경 구성 및 문서 정리 | 데이터 정제 <br> 문서 정리 | 전처리 <br> feature 추가 <br> 모델링 <br> 문서 정리 | feature 추가 <br> 모델링 <br> 문서 정리 | feature 추가 <br> 모델링 <br> 문서 정리 |
 
 ## 0. Overview
 **House Price Prediction 경진대회**는 주어진 데이터를 활용하여 서울 아파트 실거래가를 예측하는 모델을 개발하는 대회입니다.  
@@ -35,6 +45,26 @@ shap
 ## 1. Competition Info
 
 ### Overview
+House Price Prediction 경진대회는 주어진 데이터를 활용하여 서울의 아파트 실거래가를 효과적으로 예측하는 모델을 개발하는 대회입니다. 
+
+부동산은 의식주에서의 주로 중요한 요소 중 하나입니다. 이러한 부동산은 아파트 자체의 가치도 중요하고, 주변 요소 (강, 공원, 백화점 등)에 의해서도 영향을 받아 시간에 따라 가격이 많이 변동합니다. 개인에 입장에서는 더 싼 가격에 좋은 집을 찾고 싶고, 판매자의 입장에서는 적절한 가격에 집을 판매하기를 원합니다. 부동산 실거래가의 예측은 이러한 시세를 예측하여 적정한 가격에 구매와 판매를 도와주게 합니다. 그리고, 정부의 입장에서는 비정상적으로 시세가 이상한 부분을 체크하여 이상 신호를 파악하거나, 업거래 다운거래 등 부정한 거래를 하는 사람들을 잡아낼 수도 있습니다. 
+
+저희는 이러한 목적 하에서 다양한 부동산 관련 의사결정을 돕고자 하는 부동산 실거래가를 예측하는 모델을 개발하는 것입니다. 특히, 가장 중요한 서울시로 한정해서 서울시의 아파트 가격을 예측하려고합니다.
+
+<img width="698" height="285" alt="image" src="https://github.com/user-attachments/assets/bd8dce14-7af0-4634-b59e-c03c2ff93649" />
+
+
+참가자들은 대회에서 제공된 데이터셋을 기반으로 모델을 학습하고, 서울시 각 지역의 아파트 매매 실거래가를 예측하는데 중점을 둡니다. 이를 위해 선형 회귀, 결정 트리, 랜덤 포레스트, 혹은 딥 러닝과 같은 다양한 regression 알고리즘을 사용할 수 있습니다.
+
+
+제공되는 데이터셋은 총 네가지입니다. 첫번째는 국토교통부에서 제공하는 아파트 실거래가 데이터로 아파트의 위치, 크기, 건축 연도, 주변 시설 및 교통 편의성과 같은 다양한 특징들을 포함하고 있습니다. 두번째와 세번째 데이터는 추가 데이터로, 서울시에서 제공하는 지하철역과 버스정류장에 대한 다양한 정보들을 포함하고 있습니다. 마지막 네번째 데이터는 평가 데이터로, 최종 모델성능에 대한 검증을 위해 사용됩니다.
+
+참가자들은 이러한 다양한 변수와 데이터를 고려하여 모델을 훈련하고, 아파트의 실거래가에 대한 예측 성능을 높이기 위한 최적의 방법을 찾아야 합니다.
+
+<img width="873" height="359" alt="image" src="https://github.com/user-attachments/assets/0d10ec04-f21f-4325-b771-d9c39fb05dc8" />
+
+
+경진대회의 목표는 정확하고 일반화된 모델을 개발하여 아파트 시장의 동향을 미리 예측하는 것입니다. 이를 통해 부동산 관련 의사 결정을 돕고, 효율적인 거래를 촉진할 수 있습니다. 또한, 참가자들은 모델의 성능을 평가하고 다양한 특성 간의 상관 관계를 심층적으로 이해함으로써 데이터 과학과 머신 러닝 분야에서의 실전 경험을 쌓을 수 있습니다.
 
 * Input: 아파트 특징 및 거래 정보 (국토교통부 실거래가 + 서울시 교통 데이터)
 * Output: 거래금액(만원 단위)
@@ -160,16 +190,14 @@ upstage-ml-regression-ml_2/
 
 * Public LB RMSE: 15426.7103
 * Private LB RMSE: 13682.2369
+* 리더보드 중간 순위: **3위**
 * 최종 순위: **5위**
 
-### Presentation
-
-* [최종 발표자료 PDF]() (추가 예정)
+중간 순위 13682.2369 3위에서 최종 순위는 15426.7103 5위로 결정됨
 
 ---
 
 ## etc
-
 ### Reference
 
 * 국토교통부 실거래가 공개시스템
