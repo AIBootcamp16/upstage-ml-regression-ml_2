@@ -16,7 +16,7 @@
 |            [김소은 (팀장)](https://github.com/oriori88)             |            [김재록](https://github.com/Raprok612)             |            [김종화](https://github.com/JHKIM-ItG)             |            [최보경](https://github.com/bekky1016)             |            [황은혜](https://github.com/eeunhyee)             |
 | 전처리 <br> feature 추가 <br> 모델링 <br> 작업환경 구성 <br> 문서 정리 | 데이터 정제 <br> 문서 정리 | 전처리 <br> feature 추가 <br> 모델링 <br> 문서 정리 | feature 추가 <br> 모델링 <br> 문서 정리 | feature 추가 <br> 모델링 <br> 문서 정리 |
 
----
+<br>
 
 ## 0. Overview
 **House Price Prediction 경진대회**는 주어진 데이터를 활용하여 서울 아파트 실거래가를 예측하는 모델을 개발하는 대회입니다.  
@@ -49,7 +49,8 @@ shap | 0.50.0
 ipykernel | 6.27.1
 ipython | 8.15.0
 jupyter | 1.0.0
----
+
+<br>
 
 ## 1. Competition Info
 
@@ -84,7 +85,7 @@ House Price Prediction 경진대회는 주어진 데이터를 활용하여 서�
 * 2025년 9월 1일 – 대회 시작
 * 2025년 9월 11일 – 최종 제출 마감
 
----
+<br>
 
 ## 2. Components
 
@@ -140,7 +141,7 @@ upstage-ml-regression-ml_2/
 
 ```
 
----
+<br>
 
 ## 3. Data Description
 
@@ -173,7 +174,7 @@ upstage-ml-regression-ml_2/
 	 * 강남여부, 한강여부 : 강남x전용면적, 한강x전용면적 상호작용도 함께 추가
 	 * 신축 여부
 
----
+<br>
 
 ## 4. Modeling
 
@@ -191,7 +192,7 @@ upstage-ml-regression-ml_2/
 4. 교차 검증 (TimeSeriesSplit + 지역 기반 검증)
 5. 스태킹을 통한 최종 성능 개선
 
----
+<br>
 
 ## 5. Result
 
@@ -206,15 +207,13 @@ upstage-ml-regression-ml_2/
 
 중간 순위 15426.7103 3위에서 최종 순위는 13682.2369 5위로 결정됨
 
----
+<br>
 
-## etc
+## 6. etc
 ### Presentation
 [![Presentation](https://github.com/user-attachments/assets/f762f49e-cff7-44a9-a580-feb3cbb0737a)](https://docs.google.com/presentation/d/1gg5JQc3xwXux9kp8cqvrli3G-aei9OjS/edit?slide=id.g37e30576558_1_0#slide=id.g37e30576558_1_0)
 
 이미지를 누르면 상세한 PPT를 볼 수 있습니다.
-
----
 
 ### Reference
 
