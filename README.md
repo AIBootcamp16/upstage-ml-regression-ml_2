@@ -14,7 +14,7 @@
 | ![김소은](https://avatars.githubusercontent.com/u/11532528?v=4) | ![김재록](https://avatars.githubusercontent.com/u/47843619?v=4) | ![김종화](https://avatars.githubusercontent.com/u/221108223?v=4) | ![최보경](https://avatars.githubusercontent.com/u/110219144?v=4) | ![황은혜](https://avatars.githubusercontent.com/u/100017750?v=4) |
 | :--------------------------------------------------------------: | :--------------------------------------------------------------: | :--------------------------------------------------------------: | :--------------------------------------------------------------: | :--------------------------------------------------------------: |
 |            [김소은 (팀장)](https://github.com/oriori88)             |            [김재록](https://github.com/Raprok612)             |            [김종화](https://github.com/JHKIM-ItG)             |            [최보경](https://github.com/bekky1016)             |            [황은혜](https://github.com/eeunhyee)             |
-| 전처리 <br> feature 추가 <br> 모델링 <br> 작업환경 구성 및 문서 정리 | 데이터 정제 <br> 문서 정리 | 전처리 <br> feature 추가 <br> 모델링 <br> 문서 정리 | feature 추가 <br> 모델링 <br> 문서 정리 | feature 추가 <br> 모델링 <br> 문서 정리 |
+| 전처리 <br> feature 추가 <br> 모델링 <br> 작업환경 구성 <br> 문서 정리 | 데이터 정제 <br> 문서 정리 | 전처리 <br> feature 추가 <br> 모델링 <br> 문서 정리 | feature 추가 <br> 모델링 <br> 문서 정리 | feature 추가 <br> 모델링 <br> 문서 정리 |
 
 ---
 
