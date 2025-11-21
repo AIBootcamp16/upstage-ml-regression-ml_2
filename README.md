@@ -16,30 +16,39 @@
 |            [김소은 (팀장)](https://github.com/oriori88)             |            [김재록](https://github.com/Raprok612)             |            [김종화](https://github.com/JHKIM-ItG)             |            [최보경](https://github.com/bekky1016)             |            [황은혜](https://github.com/eeunhyee)             |
 | 전처리 <br> feature 추가 <br> 모델링 <br> 작업환경 구성 및 문서 정리 | 데이터 정제 <br> 문서 정리 | 전처리 <br> feature 추가 <br> 모델링 <br> 문서 정리 | feature 추가 <br> 모델링 <br> 문서 정리 | feature 추가 <br> 모델링 <br> 문서 정리 |
 
+---
+
 ## 0. Overview
 **House Price Prediction 경진대회**는 주어진 데이터를 활용하여 서울 아파트 실거래가를 예측하는 모델을 개발하는 대회입니다.  
 본 레포지토리는 **2조 KAH**의 프로젝트 산출물을 관리하기 위한 저장소입니다.
 
 ### Environment
-- Python 3.10
-- Jupyter Notebook / VS Code (Remote-SSH)
-- GPU 서버 (NVIDIA Tesla V100)
+
+<p align="left">
+	<img src="https://img.shields.io/badge/python-blue?logo=python&logoColor=white" alt="Python"/>
+	<img src="https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white" alt="Jupyter Notebook"/>
+	<img src="https://img.shields.io/badge/VSCode-007ACC?logo=visualstudiocode&logoColor=white" alt="VSCode"/>
+	<img src="https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white" alt="Git"/>
+	<img src="https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white" alt="GitHub"/>
+</p>
 
 ### Requirements
-```bash
-numpy
-pandas
-scikit-learn
-lightgbm
-xgboost
-catboost
-matplotlib
-seaborn
-plotly
-geopandas
-shap
-````
-
+Package | Version
+--- | ---
+numpy | 1.26.4
+pandas | 2.1.4
+scikit-learn | 1.7.2
+lightgbm | 4.6.0
+xgboost | 3.1.1
+catboost | 1.2.8
+matplotlib | 3.10.7
+seaborn | 0.13.2
+plotly | 3.1.1
+geopandas | 1.1.1
+shap | 0.50.0
+ipykernel | 6.27.1
+ipython | 8.15.0
+jupyter | 1.0.0
 ---
 
 ## 1. Competition Info
@@ -193,11 +202,20 @@ upstage-ml-regression-ml_2/
 * 리더보드 중간 순위: **3위**
 * 최종 순위: **5위**
 
-중간 순위 13682.2369 3위에서 최종 순위는 15426.7103 5위로 결정됨
+<img width="768" height="382" alt="image" src="https://github.com/user-attachments/assets/e776f94d-a294-4bff-9731-19c030c01eb2" />
+
+중간 순위 15426.7103 3위에서 최종 순위는 13682.2369 5위로 결정됨
 
 ---
 
 ## etc
+### Presentation
+[![Presentation](https://github.com/user-attachments/assets/f762f49e-cff7-44a9-a580-feb3cbb0737a)](https://docs.google.com/presentation/d/1gg5JQc3xwXux9kp8cqvrli3G-aei9OjS/edit?slide=id.g37e30576558_1_0#slide=id.g37e30576558_1_0)
+
+이미지를 누르면 상세한 PPT를 볼 수 있습니다.
+
+---
+
 ### Reference
 
 * 국토교통부 실거래가 공개시스템
